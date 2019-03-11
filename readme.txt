@@ -15,3 +15,6 @@
 	因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id,commit_id为git log 所查询的结果。
 	1.穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
 	2.要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+
+6.git add <file>是把文件添加到暂存区，git commit 提交更改是将当前更改的文件提交到版本库
+	的master分支上，master分支为Git为我们自动创建的唯一分支。
