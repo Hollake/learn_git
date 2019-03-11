@@ -8,6 +8,9 @@
 
 3.git status 查看工作区的状态，比如工作区有没有新增文件，或者文件有没有被修改。
 	例如 git status readme.txt 。如果返回结果告诉你有文件被修改过，用git diff可以查看修改内容。
+	例如 git status 如果在当前目录下文件修改，便会显示
+	modified:   readme.txt，新增文件为
+	Untracked files: <file>
 
 4.cat readme.txt 读取readme.txt文件内容
 
@@ -18,3 +21,7 @@
 
 6.git add <file>是把文件添加到暂存区，git commit 提交更改是将当前更改的文件提交到版本库
 	的master分支上，master分支为Git为我们自动创建的唯一分支。
+7.乱入一条，vim readme.txt 打开文件编辑，按insert可以选择插入或者替换，按ESC退出
+	编辑，接着输入ZZ，保存退出。
+8.接着乱入，vi保存时:w，保存退出是:wq，强制退出并忽略所有修改:q!,ZZ也可以保存
+	退出。
