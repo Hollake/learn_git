@@ -29,9 +29,18 @@
 	commit -m 系统会提出警告，提示此文件夹正在被修改，强行提交只是提交
 	第一次add的文件（是否可以强行提交本人不是很清楚），所以在commit file时，
 	必须先将修改后的file进行git add <file>，接着进行git commit。
-10.命令git checkout -- <file>表示自自改后还没有放到暂存区，或者放到暂存区了，经过修改了，
+10.命令git checkout -- <file>表示修改后还没有放到暂存区，或者放到暂存区了，经过修改了，
 	但是也还没有add添加，那么使用此命令就可以恢复到最近git commit或者git add的状态。
 11.接上一条，如果已经add到暂存区了，只剩没有提交怎么办？
 	1.用git reset HEAD <file>就可以把暂存区的修改退回到工作区，此时可以
 	git status看一下状态，会发现暂存区已经没有可提交的文件，工作区有修改。
 	2.既然修改已经退回到工作区，那么就可以用git checkout -- <file>来丢弃工作	区修改.
+12.当你要删除文件的时候，可以采用命令：rm test.txt
+	这个时候（也就是说这个时候只执行了rm test.txt）有两种情况:
+	1.第一种情况:的确要把test.txt删掉，那么可以执行
+	git rm test.txt
+	git commit -m "remove test.txt",然后文件就被删掉了
+	2.文件误删，注意此时只是rm test.txt，还没有commit提交，所以可以执行
+	git checkout -- test.txt将文件恢复。
+	git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+
