@@ -63,5 +63,25 @@
 17.通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
 	如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上
 	就可以看出分支信息。git merge --no-ff -m "merge with no-ff" dev
+18.bug分支，git stash隐藏保存现有工作区内容，切换完成修复其他分支bug后，回到分支，git stash pop
+	回到工作现场。
+	假如场景是这样的。设A为游戏软件
+	1、master 上面发布的是A的1.0版本
+	2、dev 上开发的是A的2.0版本
+	3、这时，用户反映 1.0版本存在漏洞，有人利用这个漏洞开外挂
+	4、需要从dev切换到master去填这个漏洞，正常必须先提交dev目前的工作，才能切换。
+	5、而dev的工作还未完成，不想提交，所以先把dev的工作stash一下。然后切换到master
+	6、在master建立分支issue101并切换.
+	7、在issue101上修复漏洞。
+	8、修复后，在master上合并issue101
+	9、切回dev，恢复原本工作，继续工作。
+19.查看远程库信息，使用git remote -v；
+	1.本地新建的分支如果不推送到远程，对其他人就是不可见的；
+	2.从本地推送分支，使用git push origin <branch-name>，如果推送失败，说明远程分支比推送的新，所以
+	先用git pull抓取远程的新提交，进行本地合并；
+	3.没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+	4.如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git
+	 branch --set-upstream-to <branch-name> origin/<branch-name>
 
-	bug 分支学习
+20.其他有关git的问题浏览
+	https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
