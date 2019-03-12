@@ -50,3 +50,4 @@
 	在接下来，每次commit以后，有需要都可以进行push。
 14.clone到本地仓库，使用git clone git@github.com:Hollake/learn_git.git就可以clone远程仓库到
 	你当前路径下。
+	brnach test
