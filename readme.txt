@@ -58,4 +58,4 @@
 	合并某分支到当前分支：git merge <name>
 	删除分支：git branch -d <name>
 
-creating a new branch is quick andandand simple
+creating a new branch is quick and simple
