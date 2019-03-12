@@ -50,4 +50,12 @@
 	在接下来，每次commit以后，有需要都可以进行push。
 14.clone到本地仓库，使用git clone git@github.com:Hollake/learn_git.git就可以clone远程仓库到
 	你当前路径下。
-	brnach test
+15.查看当前分支：git branch
+	创建分支：git branch <name>
+	创建分支：git branch <name>
+	切换分支：git checkout <name>
+	创建+切换分支：git checkout -b <name>
+	合并某分支到当前分支：git merge <name>
+	删除分支：git branch -d <name>
+
+creating a new branch is quick & simple
