@@ -43,4 +43,10 @@
 	2.文件误删，注意此时只是rm test.txt，还没有commit提交，所以可以执行
 	git checkout -- test.txt将文件恢复。
 	git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
-
+13.在GitHub远程仓库建立一个与本地同名的repository仓库，使用
+	git remote add origin git@github.com:Hollake/learngit.git就可以将本地仓库和远程仓库关联。
+	本地库推送到远程库使用git push -u origin master,即将本地仓库推送到master分支。
+	远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
+	在接下来，每次commit以后，有需要都可以进行push。
+14.clone到本地仓库，使用git clone git@github.com:Hollake/learn_git.git就可以clone远程仓库到
+	你当前路径下。
